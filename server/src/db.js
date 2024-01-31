@@ -17,6 +17,12 @@ CommnetModel(sequelize);
 // DESESCTRUCTURACION DE MODELOS
 const { Cv, User, Comment } = sequelize.models;
 
+//Defino la relación N:1 entre Cv y User
+
+//Defino la relación : entre User y Comment
+
+
+
 
 // RELACIONES DE MODELOS
 
