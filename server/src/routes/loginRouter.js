@@ -2,7 +2,7 @@ const { Router } = require("express");
 
 const {
   loginHandler,
-} = require("../handlers/login.handler");
+} = require("../handlers/users.handler");
 
 const loginRouter = Router();
 
