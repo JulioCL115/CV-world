@@ -6,6 +6,7 @@ const createCvHandler = async (req,res)=>{
         const {name, image, text} = req.body;
         const cvCreate = await createCvController({name, image, text}); 
         res.status(201).json(cvCreate);
+        console.log('Cv created')
     } catch (error) {
         res.status(500).json({message : error.message})        
     }
@@ -20,3 +21,5 @@ const getCvs = async (req,res)=>{
     }
 }
 
+
+module.exports = {createCvHandler, getCvs}

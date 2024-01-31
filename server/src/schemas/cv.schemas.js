@@ -11,3 +11,5 @@ const createCvSchema = z.object({
         required_error: 'Text is required'
     })
 })
+
+module.exports = createCvSchema

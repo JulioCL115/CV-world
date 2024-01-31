@@ -3,8 +3,12 @@ const User = require("../models/user.model");
 
 const createCvController = async (name, image, text) => {
   try {
-    const cvCreate = await Cv.create({ name, image, text });
-    return cvCreate;
+    const cvCreated = await Cv.create({
+      name,
+      image,
+      text
+    });
+    return cvCreated;
   } catch (error) {
     console.log(error);
   }

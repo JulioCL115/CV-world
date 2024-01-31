@@ -8,8 +8,12 @@ const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}
   native: false, 
 });
 
-// IMPORTACION DE MODELOS
 
+const Cv = require('./models/cv.model.js')
+const User = require('./models/user.model.js')
+// IMPORTACION DE MODELOS
+Cv(sequelize)
+User(sequelize)
 
 // DESESCTRUCTURACION DE MODELOS
 
@@ -17,5 +21,5 @@ const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}
 
 module.exports = {
     conn: sequelize,     // para importar la conexión { conn } = require('./db.js')
-    // ...sequelize.models // para cuando alla modelos
+    ...sequelize.models // para cuando alla modelos
 }
